@@ -25,6 +25,7 @@ describe('Flexbox', () => {
     let page: Page;
     beforeEach(async () => {
         page = await browser.newPage();
+        await page.setViewport({ width: 700, height: 300 });
         await page.goto(`file:${path.join(__dirname, '/..', 'index.html')}`);
     });
 
